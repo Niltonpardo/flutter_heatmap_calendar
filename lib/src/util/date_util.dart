@@ -17,32 +17,36 @@ class DateUtil {
     'December',
   ];
 
+  // Spanish, lowercase per RAE (months are common nouns in Spanish), and
+  // words rather than the raw numbers upstream ships: the consuming app is
+  // single-locale Spanish, and a bare "8" over a calendar column reads as a
+  // count, not as agosto.
   static const List<String> SHORT_MONTH_LABEL = [
     '',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-
+    'ene',
+    'feb',
+    'mar',
+    'abr',
+    'may',
+    'jun',
+    'jul',
+    'ago',
+    'sep',
+    'oct',
+    'nov',
+    'dic',
   ];
 
+  // Spanish, lowercase per RAE (weekdays are common nouns in Spanish).
   static const List<String> WEEK_LABEL = [
     '',
-    'Sun',
+    'dom',
     '',
     '',
     '',
     '',
     '',
-    'Sat',
+    'sáb',
   ];
 
   /// Get start day of month.
